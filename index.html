@@ -14,5 +14,24 @@
       <h1>Hello World!</h1>
       <p>Hi, I'm itsfelipeh. I like Internet of Things. ;) </p>
     </div>
+    <a class="avatar" href="https://twitter.com/itsfelipeh" title="If you liked follow ?"><img src="https://pbs.twimg.com/profile_images/913587541756010496/hai8E8ma_400x400.jpg" /></a>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script id="rendered-js">
+      var str = document.getElementsByTagName('div')[0].innerHTML.toString();
+var i = 0;
+document.getElementsByTagName('div')[0].innerHTML = "";
+
+setTimeout(function () {
+  var se = setInterval(function () {
+    i++;
+    document.getElementsByTagName('div')[0].innerHTML = str.slice(0, i) + "|";
+    if (i == str.length) {
+      clearInterval(se);
+      document.getElementsByTagName('div')[0].innerHTML = str;
+    }
+  }, 10);
+}, 0);
+      //# sourceURL=pen.js
+    </script>
   </body>
 </html>
